@@ -38,12 +38,12 @@ jobs:
           value: ${{ github.repository }}
       - name: Install and Build
         run: |
-        pip3 install --upgrade jupyter
-        npm install -g mermaid.cli
-        npm install -g purgecss
-        export JEKYLL_ENV=production
-        bundle exec jekyll build --lsi
-        purgecss -c purgecss.config.js
+          pip3 install --upgrade jupyter
+          npm install -g mermaid.cli
+          npm install -g purgecss
+          export JEKYLL_ENV=production
+          bundle exec jekyll build --lsi
+          purgecss -c purgecss.config.js
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
